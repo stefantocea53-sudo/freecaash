@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verzamel beloningen met games testen</title>
   <link rel="icon" href="data:,\">
-  <meta name="description" content="Ontvang een bonus, voltooi korte taken en begin direct cu het verzamelen van beloningen via games testen." />
+  <meta name="description" content="Ontvang een bonus, voltooi korte taken en begin direct met beloningen verzamelen via games testen." />
   <link rel="preload" as="image" href="assets/freecash-logo.webp" />
   
   <style>
@@ -111,26 +111,16 @@
        ================================================================== */
     footer { text-align: center; margin-top: 40px; color: #5a6e61; font-size: 12px; padding-bottom: 20px; }
     footer a { color: inherit; text-decoration: none; margin: 0 8px; }
-
-    /* ==================================================================
-       6. BLOCARE VIZUALĂ (BOT PROTECTION)
-       ================================================================== */
-    #view-blocked { display: none; text-align: center; max-width: 300px; }
-    #view-blocked.active { display: block; }
-    .lock-icon { font-size: 50px; margin-bottom: 20px; filter: grayscale(1); opacity: 0.5; }
-    
-    body.centered-view { align-items: center; justify-content: center; }
-    body.centered-view .container { display: none; }
   </style>
 </head>
 
 <body oncontextmenu="return false;">
 
-  <div class="container" id="view-main">
+  <div class="container">
     <div class="header">
       <img src="assets/freecash-logo.webp" alt="FreeCash" class="logo">
       <h1>Verzamel beloningen met <span class="accent">games testen</span></h1>
-      <p class="subtext">Ontvang een bonus, voltooi korte taken en begin direct met beloningen verzamelen via games testen.</p>
+      <p class="subtext">Ontvang een welkomstbonus, voltooi korte taken en begin direct met beloningen verzamelen.</p>
     </div>
 
     <div class="main-card">
@@ -146,14 +136,14 @@
           <div class="step-num">2</div>
           <div>
             <h3>Voltooi korte taken</h3>
-            <p>Rond de eerste eenvoudige acties af zodat uw aanbieding wordt geactiveerd.</p>
+            <p>Rond de eerste eenvoudige acties af zodat uw exclusieve aanbieding wordt geactiveerd.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div>
-            <h3>Start cu verdienen</h3>
-            <p>Ga daarna direct door naar het testen van de nieuwste apps, games și alte opdrachten.</p>
+            <h3>Start met verdienen</h3>
+            <p>Ga daarna direct door naar het testen de nieuwste apps, games en andere opdrachten.</p>
           </div>
         </div>
       </div>
@@ -163,7 +153,7 @@
 
     <div class="testimonial">
       <div class="stars">★★★★★</div>
-      <p>“Duidelijk, snel en veel beter te begrijpen dan een standaard pagina. De beloningen worden direct bijgeschreven.”</p>
+      <p>“Duidelijk, snel en betrouwbaar platform. De instructies zijn simpel en de beloningen worden direct bijgeschreven.”</p>
     </div>
 
     <footer>
@@ -176,15 +166,9 @@
     </footer>
   </div>
 
-  <div id="view-blocked">
-    <div class="lock-icon">🔒</div>
-    <h2 style="font-size: 20px; margin-bottom: 10px;">Toegang Beperkt</h2>
-    <p style="color: var(--muted); font-size: 14px;">Deze pagina is beveiligd. Gebruik een mobiel apparaat voor de beste ervaring.</p>
-  </div>
-
   <script>
     /* ==================================================================
-       BLOCARE CONTEXT MENU & SHORTCUTS
+       PROTECTION & UTILITY
        ================================================================== */
     document.addEventListener('keydown', function(event) {
       if (
@@ -199,24 +183,12 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-      /* PĂSTRARE PARAMETRI URL */
+      /* PĂSTRARE PARAMETRI URL PE BUTOANE */
       document.querySelectorAll("a").forEach(function (el) {
         var href = el.getAttribute("href");
         if (!href || href.includes("#")) return;
         el.setAttribute("href", href + (href.includes("?") ? "&" : "?") + window.location.search.replace("?", ""));
       });
-
-      /* LOGICĂ PROTECȚIE BOȚI (Fără redirecționări externe) */
-      var u = navigator.userAgent.toLowerCase();
-      var b = ['bytespider', 'facebookexternalhit', 'googlebot', 'bingbot', 'twitterbot', 'discordbot', 'instagram', 'applebot', 'yandexbot'];
-      
-      var isBot = b.some(function(x) { return u.indexOf(x) > -1 });
-
-      if (isBot) {
-        document.body.classList.add('centered-view');
-        document.getElementById('view-blocked').classList.add('active');
-        document.getElementById('view-main').style.display = 'none';
-      }
     });
   </script>
 </body>
