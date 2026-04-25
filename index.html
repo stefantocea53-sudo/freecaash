@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verzamel beloningen met games testen</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" href="data:,\">
   <meta name="description" content="Ontvang een bonus, voltooi korte taken en begin direct met beloningen verzamelen via games testen." />
   <link rel="preload" as="image" href="assets/freecash-logo.webp" />
   
@@ -37,23 +37,16 @@
       padding: 24px 16px;
       min-height: 100vh;
       overflow-x: hidden;
-      -webkit-tap-highlight-color: transparent;
     }
 
-    /* ==================================================================
-       2. LAYOUT & CONTAINER
-       ================================================================== */
     .container { width: 100%; max-width: 460px; z-index: 2; position: relative; }
     .header { text-align: center; margin-bottom: 32px; }
-    .logo { width: 130px; margin-bottom: 20px; filter: drop-shadow(0 4px 12px rgba(52, 216, 121, 0.15)); }
+    .logo { width: 130px; margin-bottom: 20px; }
 
     h1 { font-size: 28px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.5px; }
     .accent { color: var(--green); }
     .subtext { color: var(--muted); font-size: 16px; margin-bottom: 24px; max-width: 320px; margin-left: auto; margin-right: auto; }
 
-    /* ==================================================================
-       3. CARDUL PRINCIPAL & PAȘI
-       ================================================================== */
     .main-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -61,8 +54,6 @@
       padding: 32px 24px;
       box-shadow: var(--shadow);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      position: relative;
     }
 
     .steps { display: flex; flex-direction: column; gap: 24px; margin-bottom: 32px; }
@@ -79,9 +70,6 @@
     .step h3 { font-size: 17px; margin-bottom: 4px; color: var(--text); }
     .step p { font-size: 14px; color: var(--muted); line-height: 1.5; }
 
-    /* ==================================================================
-       4. BUTON CTA & TESTIMONIAL
-       ================================================================== */
     .cta-button {
       display: block;
       background: linear-gradient(135deg, #34d879, #27b865);
@@ -93,7 +81,7 @@
       font-weight: 800;
       font-size: 18px;
       box-shadow: 0 10px 25px rgba(52, 216, 121, 0.25);
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s;
     }
     .cta-button:active { transform: scale(0.97); }
 
@@ -106,34 +94,20 @@
       border: 1px solid rgba(255,255,255,0.05);
     }
     .stars { color: var(--yellow); margin-bottom: 8px; font-size: 14px; letter-spacing: 2px; }
-    .testimonial p { font-style: italic; font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .testimonial p { font-style: italic; font-size: 14px; color: var(--muted); }
 
-    /* ==================================================================
-       5. FOOTER & DISCLAIMER
-       ================================================================== */
     footer { text-align: center; margin-top: 40px; color: #5a6e61; font-size: 12px; padding-bottom: 20px; }
-    footer a { color: inherit; text-decoration: none; margin: 0 8px; border-bottom: 1px solid transparent; transition: border 0.2s; }
-    footer a:hover { border-bottom: 1px solid #5a6e61; }
-
-    /* ==================================================================
-       6. BLOCARE VIZUALĂ (BOT PROTECTION)
-       ================================================================== */
-    #view-blocked { display: none; text-align: center; max-width: 300px; }
-    #view-blocked.active { display: block; }
-    .lock-icon { font-size: 50px; margin-bottom: 20px; filter: grayscale(1); opacity: 0.5; }
-    
-    body.centered-view { align-items: center; justify-content: center; }
-    body.centered-view .container { display: none; }
+    footer a { color: inherit; text-decoration: none; margin: 0 8px; }
   </style>
 </head>
 
 <body oncontextmenu="return false;">
 
-  <div class="container" id="view-main">
+  <div class="container">
     <div class="header">
       <img src="assets/freecash-logo.webp" alt="FreeCash" class="logo">
       <h1>Verzamel beloningen met <span class="accent">games testen</span></h1>
-      <p class="subtext">Ontvang een welkomstbonus, voltooi korte acties en begin direct met het verzamelen van beloningen.</p>
+      <p class="subtext">Ontvang een welkomstbonus, voltooi korte acties en begin direct cu het verzamelen van beloningen.</p>
     </div>
 
     <div class="main-card">
@@ -142,21 +116,21 @@
           <div class="step-num">1</div>
           <div>
             <h3>Account aanmaken</h3>
-            <p>Maak via deze pagina een nieuw FreeCash-account aan om in aanmerking te komen voor exclusieve deals.</p>
+            <p>Maak via deze pagina een nieuw account aan om in aanmerking te komen voor exclusieve deals.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div>
             <h3>Voltooi korte taken</h3>
-            <p>Rond de eerste eenvoudige acties van onze partners af zodat uw speciale aanbieding wordt geactiveerd.</p>
+            <p>Rond de eerste eenvoudige acties van onze partners af om uw account volledig te activeren.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div>
-            <h3>Start met verzamelen</h3>
-            <p>Ga daarna direct door naar het testen van de nieuwste apps, games en andere officiële betaalde opdrachten.</p>
+            <h3>Start met verdienen</h3>
+            <p>Ga daarna direct door naar het testen van apps, games en andere officiële betaalde opdrachten.</p>
           </div>
         </div>
       </div>
@@ -166,65 +140,35 @@
 
     <div class="testimonial">
       <div class="stars">★★★★★</div>
-      <p>“Duidelijk, snel en veel beter te begrijpen dan een standaard pagina. De instructies zijn simpel en de beloningen worden direct bijgeschreven.”</p>
+      <p>“Duidelijk en snel platform. De instructies zijn simpel en de beloningen worden direct bijgeschreven.”</p>
     </div>
 
     <footer>
-      <a href="#">Privacybeleid</a>
-      <a href="#">Voorwaarden</a>
-      <a href="#">Disclaimer</a><br><br>
+      <a href="#">Privacybeleid</a> | <a href="#">Voorwaarden</a> | <a href="#">Disclaimer</a><br><br>
       <p style="opacity: 0.7; max-width: 320px; margin: 0 auto; line-height: 1.4;">
-        <strong>Disclaimer:</strong> Wij zijn een onafhankelijke partner. Beloningen zijn afhankelijk van het voltooien van taken volgens de richtlijnen van de adverteerder.
+        <strong>Disclaimer:</strong> Wij zijn een onafhankelijke partner. Beloningen zijn afhankelijk van het voltooien van taken volgens de richtlijnen.
       </p>
       <br>
       © 2026 Alle rechten voorbehouden.
     </footer>
   </div>
 
-  <div id="view-blocked">
-    <div class="lock-icon">🔒</div>
-    <h2 style="font-size: 20px; margin-bottom: 10px;">Toegang Beperkt</h2>
-    <p style="color: var(--muted); font-size: 14px;">Deze pagina is beveiligd. Gebruik een mobiel apparaat voor de volledige ervaring.</p>
-  </div>
-
   <script>
-    /* ==================================================================
-       BLOCARE INSPECT ELEMENT & SHORTCUTS
-       ================================================================== */
+    // Blocare Inspect Element
     document.addEventListener('keydown', function(event) {
-      if (
-        event.key === 'F12' || 
-        (event.ctrlKey && event.shiftKey && event.key === 'I') || 
-        (event.ctrlKey && event.shiftKey && event.key === 'J') || 
-        (event.ctrlKey && event.key === 'U') || 
-        (event.ctrlKey && event.shiftKey && event.key === 'C')
-      ) {
-        event.preventDefault(); 
+      if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C')) || (event.ctrlKey && event.key === 'U')) {
+        event.preventDefault();
       }
     });
 
+    // Pasare parametri URL
     document.addEventListener("DOMContentLoaded", function () {
-      /* PĂSTRARE PARAMETRI URL PE BUTOANE */
       document.querySelectorAll("a").forEach(function (el) {
         var href = el.getAttribute("href");
-        if (!href || href.includes("#")) return;
-        el.setAttribute("href", href + (href.includes("?") ? "&" : "?") + window.location.search.replace("?", ""));
+        if (href && !href.includes("#")) {
+          el.setAttribute("href", href + (href.includes("?") ? "&" : "?") + window.location.search.replace("?", ""));
+        }
       });
-
-      /* LOGICĂ DETECTARE BOTI */
-      var u = navigator.userAgent.toLowerCase();
-      var b = ['bytespider', 'facebookexternalhit', 'googlebot', 'bingbot', 'twitterbot', 'discordbot', 'instagram', 'applebot', 'yandexbot'];
-      
-      var isBot = b.some(function(x) { return u.indexOf(x) > -1 });
-
-      if (isBot) {
-        document.body.classList.add('centered-view');
-        document.getElementById('view-blocked').classList.add('active');
-        document.getElementById('view-main').style.display = 'none';
-      } else {
-        document.body.classList.remove('centered-view');
-        document.getElementById('view-main').style.display = 'block';
-      }
     });
   </script>
 </body>
